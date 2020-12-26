@@ -16,13 +16,13 @@ python3 infer.py
 
 Then, the 3D generation network is able to be trained by:
 ```
-python train.py --net generator --dataset shapenet --classes "car" --batch_size 16 --epoch_batches 2500 --eval_batches 5  --optim adam --lr 1e-3 --epoch 200 --vis_batches_valid 50 --gpu 0 --save_net 10  --workers 4  --logdir "output" --suffix "{classes}_lr{lr}"
+python 3d_rec/train.py --net generator --dataset shapenet --classes "car" --batch_size 16 --epoch_batches 2500 --eval_batches 5  --optim adam --lr 1e-3 --epoch 200 --vis_batches_valid 50 --gpu 0 --save_net 10  --workers 4  --logdir "output" --suffix "{classes}_lr{lr}"
 ```
 
 To test the reconstruction, use:
 
 ```
-python test.py --net generator --net_file "best.pt" --dataset shapenet --classes "car" --batch_size 1 --input_rgb "example.jpg" --input_mask "mask.jpg" --output_dir "result" --suffix "{net}"  --overwrite --workers 1 --gpu 0
+python 3d_rec/test.py --net generator --net_file "best.pt" --dataset shapenet --classes "car" --batch_size 1 --input_rgb "example.jpg" --input_mask "mask.jpg" --output_dir "result" --suffix "{net}"  --overwrite --workers 1 --gpu 0
 ```
 
 The code is being updated and refined. If you summarize relevant works or refer to the code, please cite
