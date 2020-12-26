@@ -2,7 +2,7 @@
 ## Single Image Shape-from-Silhouettes 
 ### 28th ACM International Conference on Multimedia (ACM MM 20)
 
-First train the view generation network, we incoporate 2D-3D-2D concept (borrowed from equivariant_neural_render) to improve gan-based pixel-level synthesis performance in original paper:
+First train the view generation network, I incoporate 2D-3D-2D concept (borrowed from equivariant_neural_render) to improve gan-based pixel-level synthesis performance in original paper:
 
 To train the network, use:
 ```
